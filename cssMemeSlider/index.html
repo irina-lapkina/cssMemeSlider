@@ -7,24 +7,47 @@
     <link rel="stylesheet" href="./normalize.css" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./assets/svg/favicon.svg" />
-    <script src="./script.js" defer></script>
   </head>
   <body>
+    <!-- Image slider start -->
     <div class="slider">
-      <div class="slides">
-        <img src="./assets/img/img1.jpg" class="active" alt="Dog 1" />
-        <img src="./assets/img/img2.jpg" class="active" alt="Dog 2" />
-        <img src="./assets/img/img3.jpg" class="active" alt="Dog 3" />
-        <img src="./assets/img/img4.jpg" class="active" alt="Dog 4" />
-      </div>
-      <div class="service-elements">
-        <div class="caption">Подпись к изображению 1</div>
-        <div class="controls">
-          <div class="control-btn active" data-index="0"></div>
-          <div class="control-btn" data-index="1"></div>
-          <div class="control-btn" data-index="2"></div>
-          <div class="control-btn" data-index="3"></div>
+      <div class="imgs_slides">
+        <!-- Radio buttons start -->
+        <input type="radio" name="radio-btn" id="radio1" checked />
+        <input type="radio" name="radio-btn" id="radio2" />
+        <input type="radio" name="radio-btn" id="radio3" />
+        <input type="radio" name="radio-btn" id="radio4" />
+        <input type="radio" name="radio-btn" id="radio5" />
+        <!-- Radio buttons end -->
+        <!-- Embedding  images start -->
+        <div class="first slide">
+          <img src="./assets/img/img1.jpg" alt="Dog 1" />
+          <div class="caption">Классная собака на пляже</div>
         </div>
+        <div class="slide">
+          <img src="./assets/img/img2.jpg" alt="Dog 2" />
+          <div class="caption">Классная собака в поле</div>
+        </div>
+        <div class="slide">
+          <img src="./assets/img/img3.jpg" alt="Dog 3" />
+          <div class="caption">Прелесть какая собака</div>
+        </div>
+        <div class="slide">
+          <img src="./assets/img/img4.jpg" alt="Dog 4" />
+          <div class="caption">Собаки целуются</div>
+        </div>
+        <div class="slide">
+          <img src="./assets/img/img5.jpg" alt="Dog 5" />
+          <div class="caption">Ващще классная собака</div>
+        </div>
+        <div class="navigation">
+          <label for="radio1" class="navigation-btn"> </label>
+          <label for="radio2" class="navigation-btn"> </label>
+          <label for="radio3" class="navigation-btn"> </label>
+          <label for="radio4" class="navigation-btn"> </label>
+          <label for="radio5" class="navigation-btn"> </label>
+        </div>
+        <!-- Embedding images end -->
       </div>
     </div>
   </body>
