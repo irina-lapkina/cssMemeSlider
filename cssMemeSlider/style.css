@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -16,7 +17,7 @@ body {
   top: 30%;
   left: 50%;
   transform: translate(-50%, -30%);
-  max-width: 1024px;
+  max-width: 90vw;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -25,7 +26,6 @@ body {
 .imgs_slides {
   width: 500%;
   display: flex;
-  border-radius: 20px;
 }
 
 /* We have to set display: none;
@@ -42,13 +42,14 @@ be visible at the same time */
 
 .slide img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 2em;
 }
 
 .caption {
-  margin-top: 30px;
+  margin-top: 0.8em;
   color: white;
-  font-size: 20px;
+  font-size: 1.5em;
+  max-width: 30vw;
 }
 
 /* css for slide navigation */
@@ -56,22 +57,21 @@ be visible at the same time */
   position: absolute;
   bottom: 0;
   right: 0;
-  margin-top: 15px;
   margin-right: 1%;
   display: flex;
   justify-content: flex-end;
 }
 
 .navigation-btn {
-  border: 3px solid #fff;
-  padding: 7px;
-  border-radius: 10px;
+  border: 0.3em solid #fff;
+  padding: 0.5em;
+  border-radius: 1em;
   cursor: pointer;
   transition: 0.5s;
 }
 
 .navigation-btn:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 20%;
 }
 
 .navigation-btn:hover {
@@ -110,4 +110,34 @@ slider */
 #radio4:checked ~ .navigation label:nth-of-type(4),
 #radio5:checked ~ .navigation label:nth-of-type(5) {
   background: #53b1c2;
+}
+
+@media (max-width: 768px) {
+  .caption {
+    margin-top: 5em;
+    font-size: 1.5em;
+    max-width: 80vw;
+  }
+
+  .slider {
+    max-width: 95vw;
+  }
+
+  .navigation {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    max-width: 30vw;
+    justify-content: center;
+    bottom: 22%;
+  }
+
+  .navigation-btn {
+    border: 0.2em solid #fff;
+    padding: 0.5em;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: 0.5s;
+  }
 }
