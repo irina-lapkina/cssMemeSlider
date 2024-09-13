@@ -29,9 +29,6 @@ body {
   display: flex;
 }
 
-/* We have to set display: none;
-If not, all of our images would 
-be visible at the same time */
 .imgs_slides input {
   display: none;
 }
@@ -50,10 +47,8 @@ be visible at the same time */
   margin-top: 0.8em;
   color: white;
   font-size: 1.2em;
-
 }
 
-/* css for slide navigation */
 .navigation {
   position: absolute;
   bottom: 0;
@@ -82,12 +77,6 @@ be visible at the same time */
   background: #53b1c2;
 }
 
-/* The checked attribute is used with
-reference to <input type="radio">, 
-when radio button is clicked the 
-class will shift w.r.t  left margin 
-as mentioned which results in image 
-slider */
 #radio1:checked ~ .first {
   margin-left: 0;
 }
@@ -119,12 +108,16 @@ slider */
 @media (max-width: 1023px) {
   .caption {
     margin-top: 5em;
-    font-size: 1.5em;
     max-width: 80vw;
   }
 
   .slider {
     max-width: 95vw;
+    padding-bottom: 0;
+  }
+
+  .slide img {
+    width: 95vw;
   }
 
   .navigation {
@@ -134,14 +127,6 @@ slider */
     right: 0;
     max-width: 30vw;
     justify-content: center;
-    bottom: 22%;
-  }
-
-  .navigation-btn {
-    border: 0.2em solid #fff;
-    padding: 0.5em;
-    border-radius: 1em;
-    cursor: pointer;
-    transition: 0.5s;
+    bottom: 10%;
   }
 }
